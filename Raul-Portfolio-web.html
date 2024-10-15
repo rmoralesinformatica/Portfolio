@@ -60,11 +60,12 @@
         /*Seccion de inicio*/
         .inicio {
             background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-                url('./img/fondo-inicio.jpg');
+            url('./img/fondo-inicio.jpg');
+            padding-bottom: 0;
+            background-repeat: no-repeat;
             background-size: cover;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
+            background-position: center;
+            
         }
 
         .iconos-contacto a:hover {
@@ -80,24 +81,31 @@
             max-width: 100%;
 
         }
+        .datosPersonales, 
+        .aficiones, 
+        .fp-daw, 
+        .fp-smr {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            flex-grow: 1;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 100%;
+        }
 
+     
         .datosPersonales {
             background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
                 url('https://github.com/rmoralesinformatica/portfolio/blob/main/img/fondo-datos-personales.png?raw=true');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            flex-grow: 1;
-            box-sizing: border-box;
             min-height: 30vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            max-width: 100%;
+            overflow: hidden;
         }
 
         .datosPersonales ul {
@@ -115,22 +123,14 @@
 
         .aficiones {
             background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-                url('https://github.com/rmoralesinformatica/portfolio/blob/main/img/fondo-pasatiempos.png?raw=true');
+            url('https://github.com/rmoralesinformatica/portfolio/blob/main/img/fondo-pasatiempos.png?raw=true');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            flex-grow: 1;
-            box-sizing: border-box;
-            min-height: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
             max-width: 100%;
+            overflow: hidden;
         }
+
 
         .aficiones h1 {
             overflow: hidden;
@@ -140,18 +140,19 @@
 
         .aficiones i:hover {
             color: azure;
+            font-size: 3.6em;
         }
 
         /* Seccion Skills*/
 
         .skills {
             background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-                url('https://github.com/rmoralesinformatica/portfolio/blob/main/img/fondo-skills.jpg?raw=true');
-            background-position: top;
+            url('https://github.com/rmoralesinformatica/portfolio/blob/main/img/fondo-skills.jpg?raw=true');
             background-repeat: no-repeat;
-            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-position: top;
             color: azure;
-            overflow: hidden;
         }
 
         .skills .fila {
@@ -271,38 +272,20 @@
         .fp-daw {
             background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
                 url('https://github.com/rmoralesinformatica/portfolio/blob/main/img/fondo-daw.jpg?raw=true');
+            padding-bottom: 0;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            flex-grow: 1;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding-bottom: 0;
         }
 
         .fp-smr {
             background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
-                url('https://github.com/rmoralesinformatica/portfolio/blob/main/img/fondo-smr.jpg?raw=true');
+            url('https://github.com/rmoralesinformatica/portfolio/blob/main/img/fondo-smr.jpg?raw=true');
+            min-height: auto;
+            padding-bottom: 0;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            flex-grow: 1;
-            box-sizing: border-box;
-            min-height: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding-bottom: 0;
         }
 
         .datosPersonales strong,
@@ -327,7 +310,17 @@
         .experiencia i {
             color: #1CB698;
         }
-
+        .proyectos i{
+            font-size: 1.3em;
+        }
+        .proyectos a {
+            color: azure;
+            font-size: 1.3em;
+        }
+        .proyectos a:hover {
+            font-size: 1.6em;
+            color: #1CB698;
+        }
         footer {
             background-color: black;
             overflow: hidden;
@@ -434,9 +427,9 @@
                 <div class="col-12 p-0">
                     <div class="bg-dark text-white py-4">
                         <h1 class="text-center text-decoration-underline mb-4">Descripción</h1>
-                        <p class="text-center text-white fa-2x m-2">
-                            <strong>Hola, me llamo Raúl,</strong>
-                           me considero <strong>autodidacta</strong> .<br>
+                        <p class="text-center text-white fa-2x mx-3">
+                            Hola,<strong> me llamo Raúl,</strong>
+                           me considero una persona <strong>autodidacta</strong> .<br>
                             Quisiera <strong>formar parte de un equipo</strong> donde pudiera <strong>actualizarme constantemente.</strong>
                         </p>
                     </div>
@@ -474,26 +467,26 @@
                     <div class="col-12 col-md-6 p-0 d-flex align-items-stretch">
                         <div class="aficiones text-white w-100">
                             <h2 class="text-center mb-3 my-4">Aficiones</h2>
-                            <div class="d-flex justify-content-center flex-wrap mt-2">
-                                <div class="d-flex flex-column align-items-center mx-4">
+                            <div class="d-flex justify-content-center flex-wrap mt-5">
+                                <div class="d-flex flex-column align-items-center mx-4 mt-4">
                                     <a href="https://www.hobbyconsolas.com/" target="_blank">
                                         <i class="fa-solid fa-gamepad fa-3x mt-5"></i>
                                     </a>
                                     <span class="my-5 fa-2x">JUEGOS</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center mx-4">
+                                <div class="d-flex flex-column align-items-center mx-4 mt-4">
                                     <a href="https://muzikalia.com/" target="_blank">
                                         <i class="fa-solid fa-headphones fa-3x mt-5"></i>
                                     </a>
                                     <span class="my-5 fa-2x">MUSICA</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center mx-4">
+                                <div class="d-flex flex-column align-items-center mx-4 mt-4">
                                     <a href="https://ifbbspain.com/" target="_blank">
                                         <i class="fa-solid fa-weight-hanging fa-3x mt-5"></i>
                                     </a>
                                     <span class="my-5 fa-2x">FITNESS</span>
                                 </div>
-                                <div class="d-flex flex-column align-items-center ml-4 me-2">
+                                <div class="d-flex flex-column align-items-center ml-4 me-2 mt-4">
                                     <a href="https://librujula.publico.es/" target="_blank">
                                         <i class="fa-solid fa-book fa-3x mt-5"></i>
                                     </a>
@@ -578,16 +571,16 @@
                                 <h2 class="fa-2x mx-5">Idiomas</h2>
                                 <ul class="my-3 mx-5 list-unstyled">
                                     <li class="d-flex align-items-center my-2">
-                                        <i class="fas fa-comment-dots fa-2x me-4 ms-5"></i>
+                                        <i class="fas fa-comment-dots fa-2x mx-5 "></i>
                                         <h5 class="mt-3">Castellano: Nativo</h5>
                                     </li>
                                     <li class="d-flex align-items-center my-2">
-                                        <i class="fas fa-comment-dots me-4 fa-2x ms-5"></i>
+                                        <i class="fas fa-comment-dots mx-5 fa-2x "></i>
                                         <h5 class="mt-3">Valenciano: Nativo</h5>
                                     </li>
                                     <li class="d-flex align-items-center my-2">
-                                        <i class="fas fa-comment-dots me-4 fa-2x ms-5"></i>
-                                        <h5 class="mt-3">Inglés: Básico</h5>
+                                        <i class="fas fa-comment-dots mx-5 fa-2x "></i>
+                                        <h5 class="mt-3">Inglés : Cursando b1 </h5>
                                     </li>
                                 </ul>
                             </div>
@@ -596,16 +589,16 @@
                                 <h2 class="fa-2x ms-2">Sistemas y Servicios</h2>
                                 <ul class="my-3 mx-5 list-unstyled">
                                     <li class="d-flex align-items-center my-4 ">
-                                        <i class="fas fa-server me-4 fa-2x me-4 ms-5"></i>
+                                        <i class="fas fa-server fa-2x  mx-5"></i>
                                         <h5>Máquinas Virtuales</h5>
                                     </li>
                                     <li class="d-flex align-items-center my-4 ">
-                                        <i class="fab fa-aws me-4 fa-2x me-4 ms-5"></i>
+                                        <i class="fab fa-aws fa-2x mx-5"></i>
                                         <h5>Amazon Services</h5>
                                     </li>
                                     <li class="d-flex align-items-center my-4 ">
-                                        <i class="fab fa-linux me-4 fa-2x me-4 ms-5"></i>
-                                        <h5>S . Operativos</h5>
+                                        <i class="fab fa-linux fa-2x mx-5"></i>
+                                        <h5>Sistemas Operativos</h5>
                                     </li>
                                 </ul>
                             </div>
@@ -776,7 +769,7 @@
                                             </div>
                                             <div class="ms-3">
                                                 <span class="fa-1x me-3 mb-5">Recomendación: <a
-                                                        href="https://portal.edu.gva.es/iesabastos/es/centre/"
+                                                        href="https://github.com/rmoralesinformatica/portfolio/blob/main/Ra%C3%BAl-M_Recomendaci%C3%B3n.pdf"
                                                         class="me-4">Sr Eduardo (Gerente)</a></span>
                                             </div>
                                         </div>
@@ -797,22 +790,22 @@
                 <h1 class="text-center text-decoration-underline mb-4" id="proyectos">Enlaces algunos proyectos
                 </h1>
                 <ul class="list-unstyled mt-4">
-                    <li class="my-3 d-flex align-items-center ms-5">
-                        <i class="bi bi-github me-3 ms-4"></i>
-                        <a href="https://github.com/rmoralesinformatica/Puzzle-game-js" class="text-decoration-none text-white">Puzzle (Javascript)</a>
+                    <li class="my-3 d-flex align-items-center mx-5">
+                        <i class="bi bi-github mx-5"></i>
+                        <a href="https://github.com/rmoralesinformatica/Puzzle-game-js" class="text-decoration-none ">Puzzle (Javascript)</a>
                     </li>
-                    <li class="my-3 d-flex align-items-center ms-5">
-                        <i class="bi bi-github me-3 ms-4"></i>
-                        <a href="https://github.com/rmoralesinformatica/" class="text-decoration-none text-white">Ajax (Javascript)</a>
+                    <li class="my-3 d-flex align-items-center mx-5">
+                        <i class="bi bi-github mx-5"></i>
+                        <a href="https://github.com/rmoralesinformatica/" class="text-decoration-none ">Ajax (Javascript)</a>
                     </li>
-                    <li class="my-3 d-flex align-items-center ms-5">
-                        <i class="bi bi-github me-3 ms-4"></i>
-                        <a href="https://github.com/rmoralesinformatica/CRUD-PHP" target="_blank" class="text-decoration-none text-white" >CRUD (PHP)</a>
+                    <li class="my-3 d-flex align-items-center mx-5">
+                        <i class="bi bi-github mx-5 "></i>
+                        <a href="https://github.com/rmoralesinformatica/CRUD-PHP" target="_blank" class="text-decoration-none " >CRUD (PHP)</a>
                     </li>
-                    <li class="my-3 d-flex align-items-center ms-5">
-                        <i class="bi bi-github me-3 ms-4"></i>
+                    <li class="my-3 d-flex align-items-center mx-5 ">
+                        <i class="bi bi-github mx-5 "></i>
                         <a href="https://github.com/rmoralesinformatica/portfolio?raw=true"
-                            class="text-decoration-none text-white">Portfolio</a>
+                            class="text-decoration-none ">Portfolio</a>
                     </li>
                 </ul>
             </div>
